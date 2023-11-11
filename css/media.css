@@ -1,0 +1,119 @@
+@media (max-width: 1170px) {
+    .conteiner{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1024px){
+    body{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px){
+    .header__menu{
+        display: none;
+    }
+    .burger-menu{
+        display: block;
+    }
+    .header-poster,
+    .social{
+        height: fit-content;
+    }
+    .promo__info{
+        padding-top: 80px;
+        margin-bottom: 55px;
+        text-align: center;
+    }
+    .promo__info-logo{
+        display: none;
+    }
+    .promo__info-subtitle{
+        width: 100%;
+    }
+    .promo__info-button{
+        width: 100%;
+    }
+    .promo__info .divider{
+        width: 130px; 
+        margin: 0 auto;
+        margin-bottom: 42px;  /*margin: 0, auto тут не работает*/
+    }
+    .social__info h4,
+    .social__info h5{
+        text-align: center;
+    }
+    .social__info h5{
+        margin-bottom: 30px;
+    }
+    .social__nav a{
+        height: 64px;
+        width: 64px;
+    }
+   
+    .pitch__item{
+        width:100% ;
+    }
+    .review__item{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(3,auto);
+        row-gap: 30px;
+        justify-items: center;
+    }
+    .promo .conteiner,
+    .social .conteiner,
+    .social .conteiner,
+    .prices__table,
+    .pitch__item{
+        flex-direction: column;
+    }
+    .prices{
+        padding-bottom: 30px;
+    }
+    .prices__table--item{
+        width: 70%;
+    }
+    .prices__table{
+        align-items: center;
+    }
+    .form__contact{
+        display: flex;
+        flex-direction: column;   /*гридами не получилось перестроить , скрин прилагаю*/
+    }
+    .contact__textarea,
+    .contact__input{
+        margin-bottom: 16px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px){
+    body{
+        font-size: 12px;
+    }
+    .promo__info-title,
+    .style__title {
+        font-size: 40px;
+    }
+    .promo__info-button,
+    .style-button,
+    .contact-button{
+        width: 250px;
+    }
+    .promo__form {
+        width: 400px;
+    }
+    .social .conteiner{
+        padding-top: 30px;
+    }
+    .social__nav svg,
+    .footer__img svg{
+        width: 26px;
+        height: 26px;
+    }
+    .social__nav a {
+        width: 100%;
+        height: fit-content;
+    }
+}
