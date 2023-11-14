@@ -183,7 +183,7 @@ h5 {
 }
 
 [type=checkbox]:checked~label .lines .line1 {
-    transform: translateY(-200%) rotate(45deg);
+    transform: translateY(190%) rotate(45deg);
 }
 
 [type=checkbox]:checked~label .lines .line3 {
