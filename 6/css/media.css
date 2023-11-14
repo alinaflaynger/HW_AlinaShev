@@ -221,7 +221,7 @@
     .promo__info-button,
     .style-button,
     .contact-button {
-        width: 60%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -359,7 +359,7 @@
     .promo__info-button,
     .style-button,
     .contact-button {
-        width: 250px;
+        width: 80%;
     }
 
     .promo__form {
@@ -378,6 +378,10 @@
     }
 }
 @media (max-width: 433px) {
+    .header-poster{
+        width: 100%;
+        overflow: hidden; 
+    }
     .conteiner{
         min-height: 100%;
         width: 100%;
@@ -408,11 +412,37 @@
     }
 }
 @media (max-width: 375px){
+    .header-poster{
+        width: 100%;
+    }
     .social__nav svg,
     .footer__img svg {
         width: 20px;
         height: 20px;
     }
+    .promo__info-title {
+        font-size: 20px;
+    }
 
+}
+@media (max-width: 320px){
+    .social__nav svg,
+    .footer__img svg {
+        width: 18px;
+        height: 18px;
+    }
+    .review .conteiner,
+     .pitch .conteiner {
+        padding: 20px 5px;
+    }
+    .prices .conteiner{
+        padding: 0;
+    }
+    .social .conteiner{
+        padding: 0;
+    }
+    .promo {
+        padding: 60px 5px;
+    }
 }
 
