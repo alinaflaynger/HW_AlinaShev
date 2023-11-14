@@ -1,119 +1,418 @@
 @media (max-width: 1170px) {
-    .conteiner{
+    .conteiner {
         width: 100%;
         margin: 0 auto;
     }
 }
-@media (max-width: 1024px){
-    body{
+
+@media (max-width: 1024px) {
+    body {
         font-size: 14px;
+    }
+
+    .promo .conteiner {
+        padding: 0 30px;
+    }
+
+    .contact .conteiner {
+        padding: 0 25px;
+    }
+
+    .social .conteiner {
+        padding-left: 25px;
+    }
+
+    .prices {
+        padding-bottom: 10px;
+    }
+
+    .prices h2 {
+        margin-bottom: 0;
+    }
+
+    .review,
+    .contact,
+    .style {
+        padding-top: 50px;
+    }
+
+    .contact {
+        padding-bottom: 30px;
+    }
+
+    .section__subtitle {
+        margin-bottom: 55px;
+    }
+
+    .review__item {
+        margin-top: 50px;
+    }
+
+    .style__title,
+    .style__subtitle {
+        margin-bottom: 40px;
+    }
+
+    .form__contact {
+        justify-content: space-between;
+        column-gap: 40px;
     }
 }
 
-@media (max-width: 768px){
-    .header__menu{
+@media (max-width: 830px) {
+    .form_input {
+        padding: 16px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__menu {
         display: none;
     }
-    .burger-menu{
+
+    .burger-menu {
         display: block;
     }
+
     .header-poster,
-    .social{
+    .social {
         height: fit-content;
     }
-    .promo__info{
-        padding-top: 80px;
+
+    .promo {
+        padding: 100px 45px;
+    }
+
+    .promo .conteiner {
+        align-items: center;
+    }
+
+    .promo__info {
+        padding-top: 0px;
         margin-bottom: 55px;
         text-align: center;
     }
-    .promo__info-logo{
+
+    .promo__info-logo {
         display: none;
     }
-    .promo__info-subtitle{
+
+    .promo__info-subtitle {
         width: 100%;
     }
-    .promo__info-button{
+
+    .promo__info-button {
         width: 100%;
     }
-    .promo__info .divider{
-        width: 130px; 
+
+    .promo__info .divider {
+        width: 130px;
         margin: 0 auto;
-        margin-bottom: 42px;  /*margin: 0, auto тут не работает*/
+        margin-bottom: 42px;
+        /*margin: 0, auto тут не работает*/
     }
+
     .social__info h4,
-    .social__info h5{
+    .social__info h5 {
         text-align: center;
     }
-    .social__info h5{
+
+    .social__info h5 {
         margin-bottom: 30px;
     }
-    .social__nav a{
-        height: 64px;
-        width: 64px;
+
+    .social__nav svg {
+        height: 54px;
+        width: 54px;
     }
-   
-    .pitch__item{
-        width:100% ;
+
+    .review .conteiner,
+    .pitch .conteiner {
+        padding: 0 45px;
+        padding-bottom: 35px;
     }
-    .review__item{
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(3,auto);
+
+    .review {
+        padding: 50px 0 0;
+    }
+
+    .pitch__item,
+    .prices__table {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .pitch__item .item {
+        width: calc(100% / 2 - 30px);
+    }
+
+    .pitch__subtitle {
+        margin-bottom: 40px;
+    }
+
+    .item__img {
+        height: 82px;
+        width: 82px;
+    }
+
+    .item__subtitle {
+        padding-bottom: 0px;
+    }
+
+    /* .review__item {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
         row-gap: 30px;
         justify-items: center;
-    }
-    .promo .conteiner,
-    .social .conteiner,
-    .social .conteiner,
-    .prices__table,
-    .pitch__item{
-        flex-direction: column;
-    }
-    .prices{
-        padding-bottom: 30px;
-    }
-    .prices__table--item{
-        width: 70%;
-    }
-    .prices__table{
+    }*/
+
+    /**/
+    .review__item {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        row-gap: 30px;
+        justify-content: center;
         align-items: center;
     }
-    .form__contact{
-        display: flex;
-        flex-direction: column;   /*гридами не получилось перестроить , скрин прилагаю*/
+
+    .item--jay {
+        grid-column: span 2;
+        width: 50%;
+        margin: 0 auto;
     }
+
+    .promo .conteiner,
+    .social .conteiner,
+    .social .conteiner {
+        flex-direction: column;
+    }
+
+    .prices__table--item {
+        width: calc(100% / 2 - 30px);
+    }
+
+    .prices__table {
+        align-items: center;
+    }
+
+    .form__contact {
+        display: flex;
+        flex-direction: column;
+        /*гридами не получилось перестроить , скрин прилагаю*/
+    }
+
     .contact__textarea,
-    .contact__input{
+    .contact__input {
         margin-bottom: 16px;
         text-align: left;
     }
+
+    .contact .conteiner {
+        padding: 0 75px;
+    }
 }
 
-@media (max-width: 480px){
-    body{
-        font-size: 12px;
+@media (max-width: 550px) {
+    .promo__info {
+        width: 100%;
     }
-    .promo__info-title,
-    .style__title {
-        font-size: 40px;
-    }
+
     .promo__info-button,
     .style-button,
-    .contact-button{
+    .contact-button {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .promo__form {
+        width: 450px;
+    }
+
+    .footer__img svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .active {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .title,
+    h2,
+    .style__title {
+        font-size: 26px;
+    }
+
+    .promo {
+        padding: 80px 25px;
+    }
+
+    .promo__info-title,
+    .style__title {
+        margin-bottom: 45px;
+    }
+
+    .promo__info-button,
+    .style-button,
+    .contact-button {
+        font-size: 17px;
+    }
+
+    .pitch__title,
+    .review__title,
+    .style__title {
+        margin-bottom: 30px;
+    }
+
+    .item,
+    .item--jay {
+        margin: 10px auto;
+    }
+
+    .section.title,
+    .style,
+    .contact {
+        padding: 30px;
+    }
+
+    .review {
+        padding: 0;
+        padding-top: 30px;
+    }
+
+    .review__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item--jay {
+        width: 100%;
+    }
+
+    .jay__text {
+        margin: 0 auto;
+        margin-bottom: 65px
+    }
+
+    .item--jay .person {
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    .review .conteiner,
+    .pitch .conteiner {
+        padding: 25px;
+    }
+
+    .pitch {
+        padding-top: 0;
+    }
+
+    .pitch__item,
+    .prices__table {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .pitch__item .item {
+        width: 100%;
+    }
+
+    .prices__table--item {
+        width: 80%;
+    }
+
+    .style__title,
+    .style__subtitle {
+        margin-bottom: 30px;
+    }
+
+    .contact .conteiner {
+        padding: 0;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer__img {
+        margin-bottom: 20px;
+    }
+
+    .footer__img svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .promo__info-title {
+        font-size: 40px;
+    }
+
+    .promo__info-button,
+    .style-button,
+    .contact-button {
         width: 250px;
     }
+
     .promo__form {
         width: 400px;
     }
-    .social .conteiner{
-        padding-top: 30px;
-    }
+
     .social__nav svg,
-    .footer__img svg{
+    .footer__img svg {
         width: 26px;
         height: 26px;
     }
+
     .social__nav a {
         width: 100%;
         height: fit-content;
     }
 }
+@media (max-width: 433px) {
+    .conteiner{
+        min-height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .promo__form {
+        width: 100%;
+    }
+
+    .promo__form-name {
+        margin: 0 20px;
+    }
+
+    .promo {
+        padding: 60px 15px;
+    }
+
+    .promo__form-name {
+        margin-bottom: 20px;
+    }
+
+    .form_input {
+        width: 90%;
+    }
+
+    .prices__table--item {
+        width: 90%;
+    }
+}
+@media (max-width: 375px){
+    .social__nav svg,
+    .footer__img svg {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
