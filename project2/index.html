@@ -33,7 +33,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Service</a></li>
                     <li><a href="#work">PORTFOLIO</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#contact_us">CONTACT US</a></li>
                 </ul>
             </nav>
         </div>
@@ -46,7 +46,11 @@
                     ranks</h1>
                 <a href="#" class="home__promo-button button">SEE OUR WORK</a>
             </div>
-            <div class="home__pic"></div>
+            <div class="home__pic">
+                <div class="cir cir__blue"><img src="../project2/img/cir_b.svg"></div>
+                <div class="cir cir__orange"><img src="../project2/img/cir_o.svg"></div>
+                <div class="cir cir__orange2"><img src="../project2/img/cir_o.svg"></div>
+            </div>
         </div>
     </section>
     <section class="about" id="about">
@@ -56,7 +60,9 @@
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat.</h4>
+            <div class="circl"></div>   
         </div>
+        
     </section>
     <section class="services" id="services">
         <div class="conteiner">
@@ -139,6 +145,22 @@
             <div class="contct__info">
                 <h3>Questions, Comments, Concerns?</h3>
                 <h2>We’d love to <span>hear</span> from you!</h2>
+            </div>
+            <div class="contact__form">
+                <form name="form" method="get" action="#" id="contact_us">
+                    <label for="name">
+                        Your Email Address
+                        <input type="email" name="emial" placeholder="something@website.com">
+                    </label>
+                    <label for="name">
+                        Subject
+                        <input type="text" name="text" placeholder="Question about your article">
+                    </label>
+                    <label for="story">Message:</label>
+                        <textarea class="textarea" name="Message" id="Message" cols="50" rows="5"
+                            placeholder="Your message starts with…"></textarea>
+                    <button class="form-button button" type="submit" disabled>Send a Message</button>
+                </form>
             </div>
 
         </div>
