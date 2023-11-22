@@ -115,7 +115,10 @@ h1 {
     position: relative;
     background-color: #020E35;
 }
-
+.logo:hover path {
+    fill: #8C32F0;
+    transition: fill 0.6s;
+} 
 .header__logo::after {
     content: "";
     background: linear-gradient(270deg, #8C32F0 0%, #E73587 100%);
@@ -148,13 +151,132 @@ h1 {
     font-weight: 300;
     line-height: normal;
 }
-.header__menu a:active{
+
+.header__menu a:active {
     background: linear-gradient(270deg, #8C32F0 0%, #E73587 100%);
 }
 
 .header__menu li:last-child {
     height: 50%;
     background: linear-gradient(270deg, #8C32F0 0%, #E73587 100%);
+}
+/*-----------bur version 1--------------*/
+.header__logo{
+    z-index: 3;
+}
+.burger-menu {
+    width: 60px;
+    height: 60px;
+    display: none;
+}
+
+.burger-menu label {
+    padding-block: 10px;
+    position: relative;
+    display: block;
+    height: 100%;
+    z-index: 6;
+    background-color: transparent;
+}
+
+#check {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    right: 0;
+}
+
+.active {
+    color: #FFF;
+    font-size: 14px;
+    padding-inline: 10px;
+    font-size: 12px;
+    font-style: inherit;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.active:hover {
+    background-color: #bb95e7;
+}
+
+[type=checkbox]:checked~label .lines .line {
+    background-color: FFF;
+}
+
+.line {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #270d44;
+    position: absolute;
+    left: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in;
+}
+
+.line1 {
+    top: 0;
+}
+
+.line3 {
+    bottom: 0;
+}
+
+.line2 {
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+[type=checkbox]:checked~label .lines .line2 {
+    opacity: 0;
+    background-color: #FFF;
+}
+
+[type=checkbox]:checked~label .lines .line1 {
+    transform:rotate(135deg);
+    top:18px;
+    background-color: #FFF;
+}
+
+[type=checkbox]:checked~label .lines .line3 {
+    transform:rotate(-135deg);
+    top:18px;
+    background-color: #FFF;
+}
+
+.header__checkk-menu {
+    width: 100%;
+    background: #020E35;
+    background-blend-mode: overlay;
+    border-bottom: 1px solid #8C32F0;
+    position: fixed;
+    height: 60px;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    transition: 1.4s ease;
+    transform: translateY(-100%);
+    opacity: 0;
+    padding-left: 120px;
+}
+.nav-checkk{
+    width: (100% - 120px);
+}
+.nav-checkk,
+.nav-checkk ul{
+    height: 100%;
+}
+.nav-checkk ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+[type=checkbox]:checked~.header__checkk-menu {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /*-------------------------HOME-----------------------------*/
@@ -163,12 +285,12 @@ h1 {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    gap:30px;
+    gap: 30px;
 }
 
 .home {
     padding: 160px 0;
-    padding-bottom: 55px ;
+    padding-bottom: 55px;
 }
 
 .home__promo {
@@ -184,26 +306,33 @@ h1 {
     color: #FFF;
     font-size: 12px;
 }
-.button:hover{
+
+.button:hover {
     animation: button 2s linear infinite reverse forwards;
 }
-@keyframes button{
-    0%{
+
+@keyframes button {
+    0% {
         background: linear-gradient(270deg, #8C32F0 0%, #E73587 0%);
     }
-    20%{
-        background:linear-gradient(270deg, #8C32F0 15%, #E73587 75%);
+
+    20% {
+        background: linear-gradient(270deg, #8C32F0 15%, #E73587 75%);
     }
-    80%{
-        background:linear-gradient(270deg, #8C32F0 20%, #E73587 85%);
+
+    80% {
+        background: linear-gradient(270deg, #8C32F0 20%, #E73587 85%);
     }
-    90%{
-        background:linear-gradient(270deg, #8C32F0 50%, #E73587 95%);
+
+    90% {
+        background: linear-gradient(270deg, #8C32F0 50%, #E73587 95%);
     }
-    100%{
+
+    100% {
         background: linear-gradient(270deg, #8C32F0 10%, #E73587 90%);
     }
 }
+
 .home__pic {
     width: 630px;
     height: 456px;
@@ -214,29 +343,33 @@ h1 {
     right: 10px;
 }
 
-.cir__blue{
+.cir__blue {
     position: absolute;
     top: 13.25px;
     left: 347.3px;
     transform-origin: 49% 44%;
 }
-.cir__orange{
+
+.cir__orange {
     position: absolute;
     right: 22px;
     top: 53px;
     transform-origin: 46.5% 46.5%;
 }
-.cir__orange2{
+
+.cir__orange2 {
     position: absolute;
     left: 69.7px;
     top: 227.6px;
     transform-origin: 50.4% 48%;
 }
-.cir__blue img{
+
+.cir__blue img {
     width: 51px;
     height: 51px;
 }
-.cir{
+
+.cir {
     animation-name: circle;
     animation-iteration-count: infinite;
     animation-duration: 3s;
@@ -245,11 +378,12 @@ h1 {
 }
 
 
-@keyframes circle{
-    100%{
+@keyframes circle {
+    100% {
         transform: rotate(360deg);
     }
 }
+
 /*----------------------------about--------------------------*/
 
 .about {
@@ -265,38 +399,45 @@ h1 {
     margin: 0 auto;
     width: 70%;
 }
-.about .conteiner{
+
+.about .conteiner {
     position: relative;
 }
-.circl{
-    background-color:#F0F3FA;
+
+.circl {
+    background-color: #F0F3FA;
     position: absolute;
-    top:16px;
+    top: 16px;
     left: -25%;
     width: 276px;
-    height:276px;
+    height: 276px;
     border-radius: 50%;
     animation: circlee 12s ease 2s infinite forwards;
-    
+
 }
 
-@keyframes circlee{
-    15%{
+@keyframes circlee {
+    15% {
         opacity: 0.4;
     }
-    40%{
+
+    40% {
         opacity: 0.8;
     }
-    50%{
+
+    50% {
         left: 100%;
     }
-    65%{
+
+    65% {
         opacity: 0.4;
     }
-    75%{
+
+    75% {
         opacity: 0.8;
     }
-    100%{
+
+    100% {
         left: -25%;
     }
 }
@@ -318,6 +459,7 @@ h1 {
 .services {
     padding-top: 25px;
     max-height: 490px;
+    position: relative;
 }
 
 .services .divider {
@@ -328,26 +470,21 @@ h1 {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    overflow: hidden;
 }
 
 .item {
-    padding: 355px 40px 30px 30px;
+    padding: 355px 30px 10px 30px;
 }
 
-.item h3 {
-    margin-bottom: 25px;
-}
-
-.item h4 {
-    margin-bottom: 63px;
+.item{
+    display: grid;
+    grid-template-rows: 15% 1.5fr 25%;
 }
 
 .item-button {
-    width: 30%;
     height: 40px;
-    padding: 13px;
-    margin: 0 auto;
+    padding: 14px;
+    margin: 20px auto;
     background: linear-gradient(270deg, #8C32F0 0%, #E73587 100%);
     color: #FFF;
     font-size: 12px;
@@ -376,6 +513,7 @@ h1 {
     background-image: url(../img/ui.png);
 
 }
+
 /*----------------------------work--------------------------*/
 
 .work {
@@ -505,13 +643,17 @@ h2 span {
 .contct__info {
     text-align: left;
 }
-form{
+
+form {
     max-width: 554px;
 }
-label, input{
-    text-align: left; 
+
+label,
+input {
+    text-align: left;
     display: block;
 }
+
 label {
     color: #2C3241;
     font-size: 16px;
@@ -528,10 +670,19 @@ input {
     font-size: 18px;
     line-height: 36px;
 }
+
 input:active,
-.texarea:active{
+.texarea:active {
     box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.10) inset;
 }
+textarea:focus,
+ input:focus {
+    background-color: rgb(229, 202, 230);
+    opacity: 0.6;
+    border-color: #5d427c;
+    outline: none;
+}
+
 .textarea {
     width: 100%;
     padding: 6px 15px;
@@ -552,9 +703,10 @@ input:active,
     opacity: 0.5;
     cursor: not-allowed;
 }
-.form-button:active{
+
+.form-button:active {
     opacity: 1;
-    cursor:cell;
+    cursor: cell;
 }
 
 

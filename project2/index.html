@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <title>MyCreate</title>
 </head>
 
@@ -36,6 +36,29 @@
                     <li><a href="#contact_us">CONTACT US</a></li>
                 </ul>
             </nav>
+            <div class="burger-menu">
+                <label for="check">
+                    <input type="checkbox" id="check">
+                    <label for="check">
+                        <div class="lines">
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </div>
+                    </label>
+                    <div class="header__checkk-menu">
+                        <nav class="nav-checkk">
+                            <ul>
+                                <li class="active"><a href="#">Features</a></li>
+                                <li class="active"><a class="checkk_link" href="#home">Home</a></li>
+                                <li class="active"><a class="checkk_link" href="#about">About</a></li>
+                                <li class="active"><a class="checkk_link" href="#work">PORTFOLIO</a></li>
+                                <li class="active"><a class="checkk_link" href="#contact_us">CONTACT US</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+            </div>
+        </div>
         </div>
     </header>
     <section class="home" id="home">
@@ -60,9 +83,9 @@
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat.</h4>
-            <div class="circl"></div>   
+            <div class="circl"></div>
         </div>
-        
+
     </section>
     <section class="services" id="services">
         <div class="conteiner">
@@ -157,8 +180,8 @@
                         <input type="text" name="text" placeholder="Question about your article">
                     </label>
                     <label for="story">Message:</label>
-                        <textarea class="textarea" name="Message" id="Message" cols="50" rows="5"
-                            placeholder="Your message starts with…"></textarea>
+                    <textarea class="textarea" name="Message" id="Message" cols="50" rows="5"
+                        placeholder="Your message starts with…"></textarea>
                     <button class="form-button button" type="submit" disabled>Send a Message</button>
                 </form>
             </div>
