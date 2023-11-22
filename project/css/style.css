@@ -421,6 +421,11 @@ h5 span {
 .img--digital{
     background-image: url(../img/digital.svg);
 }
+.options img {
+    grid-row: span 2;
+    justify-self: center;
+    align-items: none;
+}
 
 .options h3 {
     padding-top: 10px;
@@ -435,7 +440,7 @@ h5 span {
     line-height: normal;
 }
 
-/*desigh*/
+/*----------------------------desigh-------------------*/
 .design {
     background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.80)), url(../img/mount.png);
     padding-top: 50px;
@@ -446,7 +451,7 @@ h5 span {
 .design {
     background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.80)), url(../img/mount.png);
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 58px;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -472,15 +477,147 @@ h5 span {
 }
 .phone__pic{
     background-image: url(../img/ph.png);
-    position: relative;
+    position: absolute;
+    top: 194px;
+    right: -44px;
     width: 187px;
     height: 394px
 }
 .phone__border{
+    right: -8px;
     background-image: url(../img/phone.png);
     position: absolute;
     width: 200px;
     height: 412px
 }
 
+/*-----------------------work-------------------*/
+.work{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.work__item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:30px;
+}
+.work__item--pic{
+    background-image: url(../img/chel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 480px;
+}
+/*---------------rewier------------------------*/
+.rewier{
+    padding-block: 42px;
+    padding-inline: 100px;
+    background-color: #F8F8F8;
+}
+.rewiers{
+    display: flex;
+    gap: 30px;
+}
+.rewier__pic{
+    padding: 40px;
+    border: 2px solid #95E1D3;
+    height: fit-content;
+}
+.rewier__info{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 20px;
+    align-items: center;
+    justify-items: left;
+}
+.rewier .divider{
+   width: 70px;
+   margin-top: 38px;
+}
+
+.rewier__info--text{
+    grid-column: span 2;
+    color: #A9AFB1;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    text-align: left;
+}
+/*----------------team--------------*/
+.team{
+    padding-block: 42px;
+    padding-inline: 100px;
+}
+.team__authors{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap:30px;
+}
+.author{
+    position: relative;
+}
+.author--pic{
+    height: 430px;
+    width: 370px;
+    margin-bottom: 28px;
+}
+.author:first-child .author--pic{
+    background-image: url(../img/kadin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.author:nth-child(2) .author--pic{
+    background-image: url(../img/zain.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.author:last-child .author--pic{
+    background-image: url(../img/charle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.author--name{
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 16px;
+}
+.author__men{
+    height: 430px;
+    width: 370px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: transparent;
+}
+.author__men:hover{
+    background: linear-gradient(0deg, rgba(237, 215, 137, 0.90) 0%, rgba(233, 130, 131, 0.90) 100%);
+    transform: translate(-16px, -16px);
+    transition: all 0.5s;
+}
+.author__men--site{
+    position: absolute;
+    left: 27%;
+    top: 188px;
+    display: flex;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.author__men--site:hover{
+    transform: translateX(-50%);
+    opacity: 1;
+}
+.author__men:hover .author__men--site{
+    width: 30px;
+    height: 30px;
+    transition: all 0.6s;
+}
 
