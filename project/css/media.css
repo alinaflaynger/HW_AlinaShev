@@ -1,0 +1,19 @@
+@media (max-width: 1277px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
+@media (max-width: 1200px) {
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .loading{
+        gap:20px;
+    }
+    .loading__item{
+        width: 25%;
+    }
+}

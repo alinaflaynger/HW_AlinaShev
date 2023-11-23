@@ -253,7 +253,6 @@ h5 span {
     width: 370px;
     position: relative;
 }
-
 .photo__item--1 {
     background-image: url(../img/photo1.jpg);
 }
@@ -531,6 +530,74 @@ h5 span {
     height: 480px;
 }
 
+
+details{
+    border: 1px solid #C6CBCD;
+    height: 78px;
+    color: #2D3033;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .point{
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid rgba(198, 203, 205, 1);
+    border-right: 2px solid rgba(198, 203, 205, 1);
+    position: absolute;
+    transform: translateX(506px) rotate(135deg);
+    transition: 0.5s ease;
+  }
+  summary{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+  }
+  .detalis__icon{
+    width: 36px;
+    height: 36px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .summary_text{
+    display: block;
+    height: 138px;
+    overflow: scroll;
+    padding: 17px 42px 10px 24px;
+    text-align: left;
+    font-size: 14px;
+  }
+  details[open]{
+    margin-bottom: 150px;
+  }
+  details[open] .summary_text{
+    border: 1px solid #C6CBCD;
+  }
+  details[open] .point{
+    transform: translateX(506px) rotate(-45deg);
+  }
+  .accordion{
+    width: 36px;
+    height: 36px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 20px 60px 20px 30px;
+  }
+  .icon1{
+    background-image: url(../img/icon1.svg);
+  }
+  .icon2{
+    background-image: url(../img/Groupicon2.svg);
+  }
+  .icon3{
+    background-image: url(../img/Groupicon3.svg);
+  }
+  
+
 /*---------------rewier------------------------*/
 .rewier {
     padding-block: 42px;
@@ -588,11 +655,12 @@ h5 span {
 
 .author {
     position: relative;
+    width: 33.33%;
 }
 
 .author--pic {
     height: 430px;
-    width: 370px;
+    max-width: 370px;
     margin-bottom: 28px;
 }
 
@@ -627,7 +695,7 @@ h5 span {
 
 .author__social {
     height: 430px;
-    width: 370px;
+    width: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1098,7 +1166,7 @@ h5 span {
   .input__form{
     border: 1px solid rgba(198, 203, 205, 1);
     color: #C6CBCD;
-    width: 234px;
+    width: 60%;
     height: 55px;
     font-size: 18px;
     font-weight: 400;
@@ -1107,7 +1175,6 @@ h5 span {
     cursor: pointer;
   }
   .button__input{
-    width: 133px;
     height: 55px;
     border: none;
     background-color: rgb(86, 212, 189);
